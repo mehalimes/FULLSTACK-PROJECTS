@@ -1,0 +1,9 @@
+div#no-page-container {
+    width: 450px;
+    height: 350px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
