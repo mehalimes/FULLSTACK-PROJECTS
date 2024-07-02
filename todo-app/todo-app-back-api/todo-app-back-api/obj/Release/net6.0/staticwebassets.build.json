@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "TQEohtxSCPlxh1LK7mKZWme1GOWqMPbB5Vng9yDxmhI=",
+  "Source": "todo-app-back-api",
+  "BasePath": "_content/todo-app-back-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

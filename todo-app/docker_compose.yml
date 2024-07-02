@@ -1,0 +1,29 @@
+version: '20.10.22'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      SA_PASSWORD: "sqlserverQ#1"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    container_name: sqlserver
+
+  webapi:
+    build:
+      context: ./todo-app-back-api
+      dockerfile: todo-app-back-api/Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - sqlserver
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=TodoApp;User Id=sa;Password=sqlserverQ#1;"
+  
+  reactapp:
+    build:
+      context: ./todo-app-front-react
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"

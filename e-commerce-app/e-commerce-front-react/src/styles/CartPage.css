@@ -1,0 +1,15 @@
+div.cart-page-con {
+  width: 100vw;
+  height: 600px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+div.cart-page-con > * {
+  margin: 50px;
+}
